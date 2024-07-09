@@ -3,7 +3,7 @@ public class condicionesSwitch {
 
     public static void main(String[] args) {
 
-        int x = 6;   // también se podrían usar char 'A' por ejemplo y con strings
+        int x = 10;   // también se podrían usar char 'A' por ejemplo y con strings
 
         switch (x) {
             case 1, 2, 3 ->
