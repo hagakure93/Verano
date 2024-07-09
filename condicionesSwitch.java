@@ -7,7 +7,7 @@ public class condicionesSwitch {
 
         switch (x) {
             case 1, 2, 3 ->
-                System.out.println("El valor de x estaba entre 1 y 3");
+                System.out.println("El valor de x estaba entre 1 y");
             case 4, 5 ->
                 System.out.println("El valor de x era 4 o 5");
             case 6 -> {             // aquí usa corchetes porque hay más de una instrucción , si no , no hace falta.
