@@ -7,10 +7,9 @@ public class intentodealgo {
         try (Scanner entrada = new Scanner(System.in) // En cuanto escribas esto sale arriba el import
                 ) {
 
-            int n;
-
             System.out.print("Introduzca un número entero: ");
-            n = entrada.nextInt();
+            int n = entrada.nextInt();
+            boolean condicion = n > 6;
             entrada.nextLine(); // se usa un nextLine para borrar el intro del buffer
 
             switch (n) {
@@ -23,11 +22,8 @@ public class intentodealgo {
 
             }
 
-            if (n > 6);
+            if (condicion == true);
                 System.out.println("Tu número es mayor que 6.");
-            
-                
-
 
             // Primero se hace un nextInt y luego un nextline para limpiar el buffer
         }
