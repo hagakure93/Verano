@@ -14,6 +14,7 @@ public class BuclesFor {
 
         }
         System.out.println("La media de los números introducidos es: " + media / 5);
+        System.out.println("Gracias por todo, ahora date una vueltecita.");
         entrada.close();
     }
 
