@@ -4,12 +4,12 @@ public class Entraditas {
 
     public static void main(String[] args) {
         
-        try (Scanner entrada = new Scanner(System.in) // En cuanto escribas esto sale arriba el import
+        try (Scanner entrada = new Scanner(System.in) 
         ) {
             String nombre;
             int n;
             System.out.print("Introduzca un número entero: ");
-            n = entrada.nextInt();
+            n = entrada.nextInt();  // El import aparece cuando pongo el nextInt()
             entrada.nextLine(); // se usa un nextLine para borrar el intro del buffer
             System.out.println("El cuadrado es: " + Math.pow(n,2));
             System.out.print("Introduzca su nombre: ");
