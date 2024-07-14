@@ -8,7 +8,7 @@ public class Matemáticas {
         
         int n = 2 , m = 4;
         int radio = (int) (Math.random()*11);// si quiero que sea un numero aleatorio entre 0 y 10 por ejm, *10
-        double resultado = Math.pow(n, m);  // n elevado a m
+        double resultado = Math.pow(n, m);  // n elevado a m , el casting sirve para convertirlo de double a int
         double area = Math.PI*(Math.pow(radio,2));
 
         System.out.println("\nEl radio random es: "+radio);
