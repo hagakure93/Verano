@@ -9,7 +9,7 @@ public class cadenas {
         System.out.println("["+cadena +"] tiene "+longitudTexto+" letras ");
         System.out.println(" La letra final es "+cadena.charAt(cadena.length()-1));
         System.out.println(" vamos que es "+ letraFinal);
-        System.out.println(" En masyusculas sería " + cadenaMayusculas);
+        System.out.println(" En masyusc sería " + cadenaMayusculas);
         System.out.println("La primera palabra es ["+palabra+"]") ;
         
         
