@@ -10,14 +10,13 @@ public class thirdEx {
             int num;
             int sumaTotal = 0;
 
-            do {
-                num = entrada.nextInt();      
+            do {   // la entrada.nextint dentro del bucle ,si no solo pregunta una vez
+                num = entrada.nextInt();
                 System.out.println("Introduzca otro número o pulse 0 para salir");
-                
 
                 sumaTotal += num;
 
-            } while (num != 0); 
+            } while (num != 0);
             System.out.println("\nLa suma total asciende a " + sumaTotal);
             if (num == 0) {
                 System.out.println("Gracias por su tiempo adios.");
