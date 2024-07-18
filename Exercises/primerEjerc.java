@@ -13,7 +13,6 @@ public class primerEjerc {
 
                 System.out.println("Dime un número");
                 numActual = entrada.nextInt();
-                
 
                 if (numActual > max) {  // los == :(
                     max = numActual;
@@ -27,10 +26,8 @@ public class primerEjerc {
                     contadorMin = 1;
                 } else if (numActual == min) {
                     contadorMin++;
-                
-                } 
-                   
-                
+
+                }
 
             }
             entrada.close();
