@@ -11,10 +11,10 @@ public class Exfive {
 
         for (int i = 0; i < palabra.length(); i++) {
             System.out.print(palabra.charAt(i) + " "); //primera vez que no uso el println
-            
-            }
-            System.out.println();
-    entrada.close();
-}
-    
+
+        }
+        System.out.println();
+        entrada.close();
+    }
+
 }
