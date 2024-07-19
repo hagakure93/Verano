@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class EjerSiete {
+public class EjerSiete {  // Te dice cuantas palabras tiene una frase
 
     public static void main(String[] args) {
 
@@ -18,7 +18,12 @@ public class EjerSiete {
                 System.out.println("La frase no tiene ninguna palabra");
             else
                 System.out.println("La frase tiene " + palabras + " palabra" + (palabras > 1 ? "s" : ""));
-        }
-    }
 
+
+            
+        }
+    }     
+     
 }
+
+
