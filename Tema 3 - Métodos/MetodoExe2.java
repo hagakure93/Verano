@@ -40,7 +40,7 @@ public class MetodoExe2 {
 
     static boolean esPar(int num) {
         return num % 2 == 0;
-
+        // otra manera: System.out.println(n%2==0 ? n+" es par" :  n+" es impar");
     }
 
     static void mostrarParImpar(int n) {

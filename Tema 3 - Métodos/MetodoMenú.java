@@ -10,15 +10,18 @@ public class MetodoMenú {
             if (pulsar == 0) {
                 menu();
                 int direccion = entrada.nextInt();
-                
-                
+
                 switch (direccion) {
-                    case 1 -> juegos();
-                    case 2 -> musica();
-                    case 3 -> cine();
-                    default -> adios();
+                    case 1 ->
+                        juegos();
+                    case 2 ->
+                        musica();
+                    case 3 ->
+                        cine();
+                    default ->
+                        adios();
                 }
-                
+
             }
         }
 
