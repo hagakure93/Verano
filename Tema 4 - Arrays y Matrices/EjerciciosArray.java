@@ -73,10 +73,10 @@ public class EjerciciosArray {
 
     static void ejercicio3(String[] cadenaPalabras, char letra) {
 
-        for (int i = 0; i < cadenaPalabras.length; i++) {
-            if (cadenaPalabras[i].toLowerCase().charAt(0) == Character.toLowerCase(letra))
-                System.out.println(cadenaPalabras[i]);
-
+        for (String cadenaPalabra : cadenaPalabras) {
+            if (cadenaPalabra.toLowerCase().charAt(0) == Character.toLowerCase(letra)) {
+                System.out.println(cadenaPalabra);
+            }
         }
     }
 
