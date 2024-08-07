@@ -7,6 +7,10 @@ public class EjercicioMatriz {
 
     }
 
+ 
+
+ 
+
     static void imprimirMatriz(int[][] m) {
 
         for (int[] fila : m) {
@@ -48,7 +52,7 @@ public class EjercicioMatriz {
                 if (columna == 1)
                     linea = "X " + linea;
                 else
-                    linea = "- "+linea;
+                    linea = "- " + linea;
             }
             System.out.println(linea);
 
