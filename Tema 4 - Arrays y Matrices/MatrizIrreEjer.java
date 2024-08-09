@@ -24,7 +24,7 @@ public class MatrizIrreEjer {
 
         for (int i = 0; i < c.length; i++) {
             for (int j = 0; j < c[i].length; j++) {
-                
+
                 // CASO 1: si en b no existe la fila
                 if (i >= b.length)
                     c[i][j] = a[i][j];
@@ -73,6 +73,5 @@ public class MatrizIrreEjer {
         }
         return s;
     }
-
 
 }
