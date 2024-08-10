@@ -6,12 +6,8 @@ public class EjercicioBordes {
     static final char ESQUINA_SUP_IZQ = '╔';
     static final char ESQUINA_SUP_DER = '╗';
     static final char ESQUINA_INF_DER = '╝';
-    static final char SEPARADOR_SUP = '╦';
-    static final char SEPARADOR_INF = '╩';
-    static final char SEPARADOR_IZQ = '╠';
-    static final char SEPARADOR_DER = '╣';
-    static final char SEPARADOR_CRUZ = '╬';
-    static final char SEPARADOR_FILAS_MATRICES = '■';
+   
+
     static final int BORDE_SUP = 0;
     static final int BORDE_INF = 1;
     static final char ESQUINA_INF_IZQ = '╚';
@@ -26,6 +22,8 @@ public class EjercicioBordes {
                 """;
         mostrarTitulo(textoLargo);
     }
+
+    /** A PARTIR DE AQUÍ SON EJERCICIOS CON STRINGS */
 
     static void mostrarTitulo(String titulo) {
         // pasamos a mayusculas
