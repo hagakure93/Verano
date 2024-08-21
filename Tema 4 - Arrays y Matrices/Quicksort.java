@@ -1,17 +1,20 @@
 import java.util.Arrays;
 import java.util.Random;
 
-public class Quicksort {
+public class Quicksort { // Para ordenar un array de forma eficiente
 
     public static void main(String[] args) {
 
-        System.out.print("Array sin ordenar: ");
-        int[] array1 = generarArray(10);
-        System.out.println(Arrays.toString(array1));
+       
 
-        quicksort(array1, 0, array1.length - 1);
-        System.out.print("\nArray ordenado: ");
-        System.out.println(Arrays.toString(array1));
+         System.out.print("Array sin ordenar: ");
+         int[] array1 = generarArray(10);
+         System.out.println(Arrays.toString(array1)); // una de las formas de imprimir un array
+         
+
+         quicksort(array1, 0, array1.length - 1);
+         System.out.print("\nArray ordenado: ");
+         System.out.println(Arrays.toString(array1));
 
     }
 
@@ -49,4 +52,5 @@ public class Quicksort {
             quicksort(A, j + 1, der); // ordenamos subarray derecho
     }
 
+   
 }
