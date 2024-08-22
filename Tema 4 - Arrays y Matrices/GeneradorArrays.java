@@ -12,14 +12,14 @@ public class GeneradorArrays {
         }
 
         int[] maximosColumnas = maximosColumnas(nums);
-        System.out.println("\nMáximos columnas: \n"+Arrays.toString(maximosColumnas));
+        System.out.println("\nMáximos columnas: \n" + Arrays.toString(maximosColumnas));
 
         int[] maximosFilas = maximosFilas(nums);
-        System.out.println("\nMáximos filas: \n"+Arrays.toString(maximosFilas));
+        System.out.println("\nMáximos filas: \n" + Arrays.toString(maximosFilas));
 
     }
 
-    static int[] maximosColumnas(int[][] matriz) {
+    public static int[] maximosColumnas(int[][] matriz) {
 
         int anchoMax = 0;
         for (int[] fila : matriz) {
@@ -40,11 +40,11 @@ public class GeneradorArrays {
         return arrayMaximos;
     }
 
-    static int[] maximosFilas(int[][] matriz) {
+    public static int[] maximosFilas(int[][] matriz) {
 
         int maxFila;
         int[] arrayMaximos = new int[matriz.length];
-       
+
         for (int i = 0; i < matriz.length; i++) {
             maxFila = Integer.MIN_VALUE;
             for (int j = 0; j < matriz[i].length; j++) {
@@ -70,7 +70,7 @@ public class GeneradorArrays {
      * @return - Matriz con enteros generados de forma aleatoria.
      */
 
-    static int[][] generarMatriz(int anchoMin, int anchoMax, int altoMin, int altoMax, int numMax) {
+    public static int[][] generarMatriz(int anchoMin, int anchoMax, int altoMin, int altoMax, int numMax) {
 
         if (anchoMin > anchoMax)
             anchoMin = anchoMax;
