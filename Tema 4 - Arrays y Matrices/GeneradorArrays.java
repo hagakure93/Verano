@@ -11,8 +11,22 @@ public class GeneradorArrays {
         }
 
     }
+    /**
+     *  Genera una matriz irregular con enteros aleatorios
+     * @param anchoMin - Anchura mínima de las filas de la matriz
+     * @param anchoMax - Anchura máxima de las filas de la matriz
+     * @param altoMin - Altura mínima de la matriz , debe ser uno o superior , de lo contrario podría no tener filas.
+     * @param altoMax - Cantidad máxima de filas de la matriz , debe ser superior a altoMin , si no , se igualaran.
+     * @param numMax - Valor máximo para cada uno de los enteros de la matriz , desde 0 hasta numMax.
+     * @return - Matriz con enteros generados de forma aleatoria.
+     */
 
     static int[][] generarMatriz(int anchoMin, int anchoMax, int altoMin, int altoMax, int numMax) {
+
+        if (anchoMin > anchoMax)
+            anchoMin = anchoMax;
+        if (altoMin > altoMax)
+            altoMin = altoMax;
 
         Random r = new Random(); // Ahora r es un objeto para crear aleatorios
         int[][] matriz = new int[r.nextInt(altoMin, altoMax + 1)][];
