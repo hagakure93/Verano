@@ -16,6 +16,7 @@ public class Matriz {
         // Utilizando metodos de otras clases
         Bordes.mostrarMatrizConBordes(matriz); // Desde una clase llamo un método de otra clase pública
         Bordes.mostrarTextoConBordes("hola ");
+        
 
         int[][] matrizA = GeneradorArrays.generarMatriz(4, 5, 4, 5, 9);
         int[][] matrizB = GeneradorArrays.generarMatriz(3, 4, 3, 5, 9);
