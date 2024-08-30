@@ -6,37 +6,40 @@ public class ExamenDam1 {
 
     public static void main(String[] args) {
 
-        Scanner entrada = new Scanner(System.in);
-        String opcion = "";
+        try (Scanner entrada = new Scanner(System.in)) {
+            String opcion;
 
-        do {
-            abrirMenu();
-            opcion = entrada.nextLine();
+            do {
+                abrirMenu();
+                opcion = entrada.nextLine();
 
-            switch (opcion) {
-                case "1":
-                    dibujarFigura(10);
-                    break;
-                case "2":
-                    modificarString("Examen de PROGRAMACIÓN");
-                    break;
-                case "3":
-                    int [] nums = eliminarDuplicados(new int[] {1,2,4,1,6,7,4,2,6,8});
-                    System.out.println(Arrays.toString(nums));
+                switch (opcion) {
+                    case "1" -> dibujarFigura(10);
+                    case "2" -> modificarString("Examen de PROGRAMACIÓN");
+                    case "3" -> {
+                        int[] nums = eliminarDuplicados(new int[] { 1, 2, 4, 1, 6, 7, 4, 2, 6, 8 });
+                        System.out.println(Arrays.toString(nums));
+                    }
+                    case "4" -> {
+                        octales(1772);
+                        break;
+                    }
+                    case "5" -> salir();
+                    default -> opcionNoValida();
+                }
+            } while (!opcion.equals("5"));
+        }
 
-                    break;
-                case "4":
+    }
 
-                    break;
-                case "5":
-                    salir();
-                    break;
-                default:
-                    opcionNoValida();
-            }
-        } while (!opcion.equals("5"));
-        entrada.close();
+    static void octales(int n) {
 
+        if (n < 8)
+            System.out.println("El número está en octal");
+        else if (n % 10 > 7)
+            System.out.println("El número NO está en octal");
+        else
+            octales(n / 10);
     }
 
     static void abrirMenu() {
@@ -129,18 +132,14 @@ public class ExamenDam1 {
                 int[] aux = new int[distintos.length + 1];
 
                 // Copiamos los elementos
-                for (int j = 0; j < distintos.length; j++) {
-                    aux[j] = distintos[j];
-                }
+                System.arraycopy(distintos, 0, aux, 0, distintos.length);
                 // Añadimos el no repetido
                 aux[aux.length - 1] = nums[i];
 
                 // Copiamos todo a distintos de nuevo
 
                 distintos = new int[aux.length];
-                for (int j = 0; j < aux.length; j++) {
-                    distintos[j] = aux[j];
-                }
+                System.arraycopy(aux, 0, distintos, 0, aux.length);
             }
         }
         return distintos;
