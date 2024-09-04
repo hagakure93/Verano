@@ -7,10 +7,7 @@ public class Ejm1 {
 
         p1.mostrarDatos();
         p2.mostrarDatos();
-        
-
-        
 
     }
-    
+
 }
