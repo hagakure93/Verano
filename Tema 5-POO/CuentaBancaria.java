@@ -1,5 +1,9 @@
 public class CuentaBancaria {
-
+    /*Esto son los distintos atributos de la clase , que se guardan en "variables de instancia"
+     * Cada objeto particular puede tener valores distintos para estas variables.
+     * Las variables de instancia son DECLARADAS en la clase(al principio) pero sus valores son fijados
+     * en el objeto.
+     */
     int id;
     private double saldo;
     Persona propietario;
