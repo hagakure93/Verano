@@ -1,4 +1,4 @@
-public class Circulo {
+public final class Circulo {
     private double radio;
     private String color;
     private int centroX, centroY;
@@ -9,7 +9,8 @@ public class Circulo {
         centroX = 100;
         centroY = 100;
     }
-    public Circulo(double r) { // crea un círculo de radio 50, negro y centro en (100,100)
+
+    public Circulo(double r) { // crea un círculo de radio r, negro y centro en (100,100)
 
         setRadio(r);
         color = "Blanco";
@@ -39,6 +40,31 @@ public class Circulo {
     public void mostrarDatos() { // obtiene un String con las componentes del círculo
 
         System.out.println(
-                "Circulo de radio " + radio + ", color " + color + " , centro (" + centroX + "," + centroY + ") y su área es "+area());
+                "Circulo de radio " + radio + ", color " + color + " , centro (" + centroX + "," + centroY
+                        + ") y su área es " + area());
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getCentroX() {
+        return centroX;
+    }
+
+    public void setCentroX(int cx) {
+        centroX = cx;
+    }
+
+    public int getCentroY() {
+        return centroY;
+    }
+
+    public void setCentroY(int cy) {
+        centroY = cy;
     }
 }
