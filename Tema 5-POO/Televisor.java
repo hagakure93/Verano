@@ -15,7 +15,15 @@ public class Televisor {
         volumen = 5;
     }
 
-    // MÉTODOS PARA SUBIR Y BAJAR CANAL/VOLUMEN
+    // MÉTODOS PARA SUBIR Y BAJAR CANAL/VOLUMEN y método para mostrar todas las
+    // vainas
+
+    public void mostrarDatos(String nombre) {
+        System.out.println("La televisión " + nombre + ":");
+        System.out.println("Canal actual = " + canal);
+        System.out.println("Volumen actual = " + volumen);
+        System.out.println("----------------------------------");
+    }
 
     public void subirVolumen() {
         setVolumen(volumen + 1);
@@ -37,7 +45,6 @@ public class Televisor {
             volumen = 0;
         else if (valorVolumen > 15)
             volumen = 15;
-        System.out.println("Volumen: " + volumen);
 
     }
 
@@ -62,7 +69,7 @@ public class Televisor {
             canal = 10;
         else if (valorCanal > 10)
             canal = 0;
-        System.out.println("Canal: " + canal);
+
     }
 
 }

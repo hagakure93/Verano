@@ -18,6 +18,10 @@ public class AplicacionTv {
         tv3.subirCanal();
         tv3.bajarVolumen();
 
+        tv1.mostrarDatos("TV1");
+        tv2.mostrarDatos("TV2");
+        tv3.mostrarDatos("TV3");
+
         
 
         
