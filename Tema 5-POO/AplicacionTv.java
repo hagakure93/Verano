@@ -4,17 +4,23 @@ public class AplicacionTv {
         // Desde aquí lo único que hago es llamar a los métodos creados en la clase
         // Televisor
         Televisor tv1 = new Televisor();
-        Televisor tv2 = new Televisor(100);
-        tv1.setCanal(47);
-        System.out.println("Tv1 canal " + tv1.getCanal());
-        System.out.println("Tv2 canal " + tv2.getCanal());
-
+        Televisor tv2 = new Televisor();
+        Televisor tv3 = new Televisor();
+        
         tv1.subirCanal();
-        tv2.subirCanal();
+        tv1.subirCanal();
+        tv1.subirVolumen();
 
-        System.out.println("Tv1 canal " + tv1.getCanal());
-        System.out.println("Tv2 canal " + tv2.getCanal());
+        tv2.bajarCanal();
+        tv2.bajarCanal();
+        tv2.subirVolumen();
 
+        tv3.subirCanal();
+        tv3.bajarVolumen();
+
+        
+
+        
     }
 
 }
