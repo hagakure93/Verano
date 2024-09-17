@@ -10,6 +10,8 @@ public class ApliPunto {
         p1.mostrarDatos2("Este es Punto 1");
         p2.mostrarDatos2("Este es Punto 2");
         p3.mostrarDatos2("Este es Punto 3");
+
+        p1.toString();
     }
     
 }
