@@ -1,5 +1,6 @@
 public class Punto {
-    
+
+    private static int puntos = 0;
 
     public int x;
     public int y;
@@ -13,6 +14,7 @@ public class Punto {
     public Punto(int x, int y) {
         this.x = x;
         this.y = y;
+        puntos += 2;
     }
 
     /**
@@ -26,6 +28,7 @@ public class Punto {
         this.x = x;
         this.y = y;
         this.nombre = nombre;
+        puntos++;
     }
 
     public Punto(int x) {
@@ -33,6 +36,7 @@ public class Punto {
         // en la clase
         this.x = x;
         this.y = x;
+        puntos += 3;
         // En estos casos , hemos asignado el valor de x(recibido como parámetro) a
         // this.x (de la instancia)
 
@@ -46,12 +50,15 @@ public class Punto {
         System.out.println("X=" + x);
         System.out.println("Y=" + y);
         System.out.println("La distancia de el centro es: " + calcularDistanciaCentro());
+        
         System.out.println("--------------------------------");
 
     }
 
     public void mostrarDatos2(String s) {
         System.out.println(s);
+        
+        getPuntos();
         mostrarDatos1();
     }
 
@@ -77,6 +84,10 @@ public class Punto {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public static void getPuntos() {
+        System.out.println("Puntos = " + puntos);
     }
 
 }
