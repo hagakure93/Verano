@@ -2,9 +2,9 @@ public class Punto {
 
     private static int puntos = 0;
 
-    public int x;
-    public int y;
-    public String nombre;
+    private int x;
+    private int y;
+    private String nombre;
 
     @Override
     public String toString() {
@@ -46,20 +46,13 @@ public class Punto {
         return Math.sqrt((x * x) + (y * y));
     }
 
-    private void mostrarDatos1() {
+    public void mostrarDatos1() {
         System.out.println("X=" + x);
         System.out.println("Y=" + y);
         System.out.println("La distancia de el centro es: " + calcularDistanciaCentro());
-        
+
         System.out.println("--------------------------------");
 
-    }
-
-    public void mostrarDatos2(String s) {
-        System.out.println(s);
-        
-        getPuntos();
-        mostrarDatos1();
     }
 
     public int getX() {
