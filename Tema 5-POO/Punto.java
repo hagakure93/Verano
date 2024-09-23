@@ -8,6 +8,13 @@ public class Punto {
     /*El override es porque todos los objetos ya tienen la funcion toString
      * así que lo que hace es sobreescribirlo para este objeto en concreto
      */
+
+
+     public Punto(int x) {
+        this.x = x;
+        this.y = x;
+    }
+    
     @Override
     public String toString() {
         return "Punto [x=" + x + ", y=" + y + ", nombre=" + nombre + "]";
@@ -44,6 +51,7 @@ public class Punto {
         // this.x (de la instancia)
 
     }
+   
 
     public double calcularDistanciaCentro() {
         return Math.sqrt((x * x) + (y * y));
