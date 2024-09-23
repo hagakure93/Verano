@@ -5,7 +5,9 @@ public class Punto {
     private int x;
     private int y;
     private String nombre;
-
+    /*El override es porque todos los objetos ya tienen la funcion toString
+     * así que lo que hace es sobreescribirlo para este objeto en concreto
+     */
     @Override
     public String toString() {
         return "Punto [x=" + x + ", y=" + y + ", nombre=" + nombre + "]";
@@ -31,12 +33,13 @@ public class Punto {
         puntos++;
     }
 
-    public Punto(int x) {
+    public Punto(int x, String n) {
         // El This se usa para señalar que es un atributo de la instancia , el declarado
         // en la clase
         this.x = x;
         this.y = x;
         puntos += 3;
+        this.nombre = n;
         // En estos casos , hemos asignado el valor de x(recibido como parámetro) a
         // this.x (de la instancia)
 
@@ -82,5 +85,7 @@ public class Punto {
     public static void getPuntos() {
         System.out.println("Puntos = " + puntos);
     }
+
+   
 
 }
