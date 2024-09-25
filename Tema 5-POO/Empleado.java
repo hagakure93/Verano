@@ -1,9 +1,9 @@
 public class Empleado {
 
     /* VARIABLES DE LA CLASE */
-    String nombreComp;
-    int permanencia;
-    int salario;
+    private String nombreComp;
+    private int permanencia;
+    private int salario;
 
     /* CONSTRUCTORES */
     public Empleado() {
