@@ -5,16 +5,16 @@ public class Punto {
     private int x;
     private int y;
     private String nombre;
-    /*El override es porque todos los objetos ya tienen la funcion toString
+    /*
+     * El override es porque todos los objetos ya tienen la funcion toString
      * así que lo que hace es sobreescribirlo para este objeto en concreto
      */
 
-
-     public Punto(int x) {
+    public Punto(int x) {
         this.x = x;
         this.y = x;
     }
-    
+
     @Override
     public String toString() {
         return "Punto [x=" + x + ", y=" + y + ", nombre=" + nombre + "]";
@@ -51,7 +51,6 @@ public class Punto {
         // this.x (de la instancia)
 
     }
-   
 
     public double calcularDistanciaCentro() {
         return Math.sqrt((x * x) + (y * y));
@@ -64,6 +63,21 @@ public class Punto {
 
         System.out.println("--------------------------------");
 
+    }
+
+    public static boolean distintos(Punto p1, Punto p2) {
+        return p1.getX() != p2.getX() || p1.getY() != p2.getY();
+    }
+
+    public static boolean distintos(Punto... puntos) {
+        for (int i = 0; i < puntos.length; i++) {
+            for (int j = i + 1; j < puntos.length; j++) {
+                if (puntos[i].getX() == puntos[j].getX() && puntos[i].getY() == puntos[j].getY()) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     public int getX() {
@@ -93,7 +107,5 @@ public class Punto {
     public static void getPuntos() {
         System.out.println("Puntos = " + puntos);
     }
-
-   
 
 }
