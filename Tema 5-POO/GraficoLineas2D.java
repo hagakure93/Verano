@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class GraficoLineas2D {
 
-    private ArrayList<Punto> puntos;
+    private final ArrayList<Punto> puntos;
 
     public GraficoLineas2D() {
         this.puntos = new ArrayList<>();
@@ -39,4 +39,7 @@ public class GraficoLineas2D {
             System.out.println("ERROR: no se ha podido agregar el punto");
 
     }
+
+    
+
 }
