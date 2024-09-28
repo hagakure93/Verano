@@ -11,7 +11,7 @@ public class Cuenta {
     private int numeroCuenta;
     private double saldo;
     private Cliente titular;
-    private ArrayList<Movimiento> movimientos;
+    private final ArrayList<Movimiento> movimientos;
 
     //////////////////////////////////////////////////////
     // CONSTRUCTORES
@@ -22,7 +22,7 @@ public class Cuenta {
         this.numeroCuenta = numeroCuenta;
         this.saldo = saldo;
         this.titular = titular;
-        this.movimientos = new ArrayList<Movimiento>();
+        this.movimientos = new ArrayList<>();
     }
 
     //////////////////////////////////////////////////////
@@ -107,6 +107,7 @@ public class Cuenta {
         s += "Saldo actual: " + saldo + "€\n";
         s += "------------------------  M O V I M I E N T O S  ------------------------\n";
         s += obtenerMovimientos();
+        System.out.println(s);
         
     }
 
@@ -123,10 +124,10 @@ public class Cuenta {
         private static final byte INGRESO = 0;
         private static final byte RETIRO = 1;
 
-        private LocalDateTime fechaHora;
-        private double importe;
-        private double saldoFinal;
-        private byte tipo;
+        private final LocalDateTime fechaHora;
+        private final double importe;
+        private final double saldoFinal;
+        private final byte tipo;
 
         public Movimiento(LocalDateTime fechaHora, double importe, byte tipo) {
             this.fechaHora = fechaHora;
