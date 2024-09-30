@@ -57,7 +57,7 @@ public class Cuenta {
     // MÉTODOS
     //////////////////////////////////////////////////////
 
-    public void ingreso(double cantidad) {
+    public  void ingreso(double cantidad) {
 
         // el ingreso debe ser positivo
         if (cantidad < 0) {
