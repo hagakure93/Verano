@@ -68,7 +68,7 @@ public class Cuenta {
         // se ingresa y se registra
         saldo += cantidad;
         movimientos.add(new Movimiento(LocalDateTime.now(), cantidad, Movimiento.INGRESO));
-        System.out.println("Se han ingresado correctamente " + cantidad + "€ en la cuenta " + numeroCuenta);
+        System.out.println("\nSe han ingresado correctamente " + cantidad + "€ en la cuenta " + numeroCuenta);
     }
 
     public void retiro(double cantidad) {

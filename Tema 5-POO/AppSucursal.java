@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class AppSucursal {
 
-    private static Scanner introducirDatos = new Scanner(System.in);
+    private static final Scanner introducirDatos = new Scanner(System.in);
     private static Cuenta cuentaActiva = null;
     private static int contadorCuenta = 1;
 
@@ -27,8 +27,8 @@ public class AppSucursal {
     }
 
     // Arraylist de cuentas y de clientes
-    private static ArrayList<Cuenta> listadoCuentas = new ArrayList<>();
-    private static ArrayList<Cliente> listadoClientes = new ArrayList<>();
+    private static final ArrayList<Cuenta> listadoCuentas = new ArrayList<>();
+    private static final ArrayList<Cliente> listadoClientes = new ArrayList<>();
 
     //////////////////////////////////////////
     // MÉTODOS //
@@ -48,6 +48,7 @@ public class AppSucursal {
 
         System.out.println("Introduce la fecha de nacimiento del cliente (AAAA-MM-DD)");
         String fecha = introducirDatos.nextLine();
+        System.out.println("\nCliente registrado satisfactoriamente");
 
         Cliente nuevoCliente = new Cliente(nombre, apellidos, apellidos, localidad,
                 LocalDate.parse(fecha));
@@ -58,11 +59,13 @@ public class AppSucursal {
     public static void crearCuenta() {
         if (listadoClientes.isEmpty()) {
             System.out.println("Registra el cliente antes de crear la cuenta.");
-
+            return;
         }
 
         String nombre;
         Cliente cliente;
+        /*Después de hacer un nextInt/double/date siempre hay que vaciar el puto buffer */
+        introducirDatos.nextLine(); 
         do {
             System.out.println("Dime el nombre del cliente al que quieres abrirle una cuenta");
             for (Cliente c : listadoClientes) {
@@ -70,9 +73,12 @@ public class AppSucursal {
             }
             nombre = introducirDatos.nextLine();
             cliente = validarCliente(nombre);
+            if (cliente == null)
+                System.out.println("Por favor selecciona un cliente existente");
 
-        } while (listadoClientes == null);
+        } while (cliente == null);
         listadoCuentas.add(new Cuenta(contadorCuenta++, 0, cliente));
+        System.out.println("\nCuenta creada satisfactoriamente");
 
     }
 
@@ -127,7 +133,7 @@ public class AppSucursal {
                 case 1:
                     System.out.println("Introduce la cantidad que quieres ingresar");
                     double cantidadIngreso = introducirDatos.nextDouble();
-                    cuentaActiva.ingreso(cantidadIngreso); // Si no funciona crea los métodos aquí
+                    cuentaActiva.ingreso(cantidadIngreso); 
                     break;
                 case 2:
                     System.out.println("Introduce la cantidad que quieres retirar");
