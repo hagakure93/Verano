@@ -1,5 +1,5 @@
 public class Hija extends Padre {
-    String nombre;
+    
     int edad;
     
     public Hija(int edad, String padre, String hija) {
