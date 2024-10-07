@@ -14,4 +14,10 @@ public class Personita {
     public int getEdad() {
         return edad;
     }
+    public void mostrarDatos(){
+        System.out.println("Nombre: "+nombre);
+    }
+    public String toString(){
+        return "Nombre:" +nombre+" Edad: "+edad;
+    }
 }
