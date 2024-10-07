@@ -17,6 +17,7 @@ public class Personita {
     public void mostrarDatos(){
         System.out.println("Nombre: "+nombre);
     }
+    @Override
     public String toString(){
         return "Nombre:" +nombre+" Edad: "+edad;
     }

@@ -18,6 +18,7 @@ public class Estudiante extends Personita {
         System.out.println("Estudiante matriculado de " + creditos + " créditos");
     }
 
+    @Override
     public String toString() {
         return super.toString() + " Creditos: " + creditos;
     }
