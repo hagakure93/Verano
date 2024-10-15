@@ -1,10 +1,13 @@
 public class Triangulo extends Figura2D {
+
     public static final byte NO_TRIANGULO = 0;
     public static final byte EQUILATERO = 1;
     public static final byte ISOSCELES = 2;
     public static final byte ESCALENO = 3;
+    private final Punto2D p1;
 
-    private Punto2D p1, p2, p3;
+    private final Punto2D p2;
+    private final Punto2D p3;
     private byte tipo;
 
     public Triangulo(Punto2D p1, Punto2D p2, Punto2D p3) {
@@ -26,7 +29,6 @@ public class Triangulo extends Figura2D {
 
     public double perimetro() {
         return Punto2D.distancia(p1, p2) + Punto2D.distancia(p2, p3) + Punto2D.distancia(p3, p1);
-
     }
 
     public boolean esTriangulo() {
@@ -37,9 +39,9 @@ public class Triangulo extends Figura2D {
 
         if (esTriangulo()) {
 
-            double a = Math.round(Punto2D.distancia(p1, p2) * 1000) / 1000d;
-            double b = Math.round(Punto2D.distancia(p2, p3) * 1000) / 1000d;
-            double c = Math.round(Punto2D.distancia(p3, p1) * 1000) / 1000d;
+            double a = Math.round(Punto2D.distancia(p1, p2)*1000)/1000d;
+            double b = Math.round(Punto2D.distancia(p2, p3)*1000)/1000d;
+            double c = Math.round(Punto2D.distancia(p3, p1)*1000)/1000d;
 
             if (a == b && b == c)
                 this.tipo = EQUILATERO;
@@ -63,11 +65,10 @@ public class Triangulo extends Figura2D {
     @Override
     public String toString() {
         if (esTriangulo())
-            return "El Triángulo es de tipo " + tipoTriangulo().toLowerCase() + ", de área "
-                    + Math.round(area() * 10) / 10d // Esto redondea, importante la d de double
+            return "El Triángulo es de tipo " + tipoTriangulo().toLowerCase() + ", de área " + Math.round(area() * 10) / 10d
                     + " y perímetro " + Math.round(perimetro() * 10) / 10d + "\n"
                     + "Sus puntos son: p1" + p1.toString() + ", p2" + p2.toString() + ", p3" + p3.toString();
-
+                    
         return "El triángulo no es válido";
     }
 

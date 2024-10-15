@@ -1,4 +1,5 @@
 public abstract class Figura2D {
+
     private final int numeroLados;
 
     public Figura2D(int numeroLados) {
@@ -7,4 +8,8 @@ public abstract class Figura2D {
 
     public abstract double area();
 
+    @Override
+    public String toString() {
+        return "Figura [numeroLados=" + numeroLados + "]";
+    }
 }
