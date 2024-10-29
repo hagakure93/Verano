@@ -10,6 +10,7 @@ public class Cliente {
     private LocalDate fechadeNacimiento;
 
     // CONSTRUCTOR (cada vez que creemos una instancia de cliente le debemos pasar cada parámetro)
+   
     public Cliente(String nombre, String apellidos, String direccion, String localidad, LocalDate fechadeNacimiento) {
 
         this.nombre = nombre;
