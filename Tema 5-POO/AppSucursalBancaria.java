@@ -4,41 +4,33 @@ import java.util.Scanner;
 
 public class AppSucursalBancaria {
 
-    private static Scanner entrada = new Scanner(System.in);
-    private static ArrayList<Cliente> clientes = new ArrayList<>();
-    private static ArrayList<Cuenta> cuentas = new ArrayList<>();
+    private static final Scanner entrada = new Scanner(System.in);
+    private static final ArrayList<Cliente> clientes = new ArrayList<>();
+    private static final ArrayList<Cuenta> cuentas = new ArrayList<>();
     private static Cuenta cuentaActiva = null;
     private static int contadorCuenta = 1;
 
     public static void main(String[] args) {
 
-        int opcion = 0;
-        while (opcion != 4) {
-            try {
-                menuPrincipal();
-                opcion = Integer.parseInt(entrada.nextLine());
-                switch (opcion) {
-                    case 1:
-                        crearCliente();
-                        break;
-                    case 2:
-                        crearCuenta();
-                        break;
-                    case 3:
-                        seleccionarCuenta();
-                        break;
-                    case 4:
-                        System.out.println("Fin del programa");
-                        break;
-                    default:
-                        System.out.println("Opción no válida, selecciona una opción entre 1 y 4");
+        try (entrada) {
+            int opcion = 0;
+            while (opcion != 4) {
+                try {
+                    menuPrincipal();
+                    opcion = Integer.parseInt(entrada.nextLine());
+                    switch (opcion) {
+                        case 1 -> crearCliente();
+                        case 2 -> crearCuenta();
+                        case 3 -> seleccionarCuenta();
+                        case 4 -> System.out.println("Fin del programa");
+                        default -> System.out.println("Opción no válida, selecciona una opción entre 1 y 4");
+                    }
+                    
+                } catch (NumberFormatException e) {
+                    System.out.println("Opción no válida, selecciona una opción entre 1 y 4");
                 }
-
-            } catch (Exception e) {
-                System.out.println("Opción no válida, selecciona una opción entre 1 y 4");
             }
         }
-        entrada.close();
     }
 
     static void crearCliente() {
@@ -87,7 +79,7 @@ public class AppSucursalBancaria {
                         throw new ClienteExisteException(c);
                 }
                 return s;
-            } catch (Exception e) {
+            } catch (ClienteExisteException e) {
                 System.out.println(e);
             }
         }
@@ -119,14 +111,17 @@ public class AppSucursalBancaria {
                 menuTipoCuenta();
                 opcion = Integer.parseInt(entrada.nextLine());
                 switch (opcion) {
-                    case 1:
+                    case 1 -> {
                         return new CuentaCorriente(contadorCuenta++, c);
-                    case 2:
+                    }
+                    case 2 -> {
                         return new CuentaVivienda(contadorCuenta++, c);
-                    case 3:
+                    }
+                    case 3 -> {
                         return new FondoInversion(contadorCuenta++, c);
+                    }
                 }
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
                 System.out.println("Tipo de cuenta no válida, selecciona una opción entre 1 y 3");
             }
         }
@@ -165,7 +160,7 @@ public class AppSucursalBancaria {
                     System.out.println(c.toString());
                 }
                 numCuenta = Integer.parseInt(entrada.nextLine());
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
                 System.out.println("Debes seleccionar un número de cuenta válido, entre 1 y " + (contadorCuenta - 1));
             }
 
@@ -193,22 +188,13 @@ public class AppSucursalBancaria {
                 menuCuenta();
                 opcionCuenta = Integer.parseInt(entrada.nextLine());
                 switch (opcionCuenta) {
-                    case 1:
-                        ingresar();
-                        break;
-                    case 2:
-                        retirar();
-                        break;
-                    case 3:
-                        cuentaActiva.verDatos();
-                        break;
-                    case 4:
-                        System.out.println("Volviendo al menú principal");
-                        break;
-                    default:
-                        System.out.println("Opción no válida");
+                    case 1 -> ingresar();
+                    case 2 -> retirar();
+                    case 3 -> cuentaActiva.verDatos();
+                    case 4 -> System.out.println("Volviendo al menú principal");
+                    default -> System.out.println("Opción no válida");
                 }
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
                 System.out.println("Opción no válida, selecciona una opción entre 1 y 4");
             }
         }

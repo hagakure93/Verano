@@ -1,6 +1,6 @@
 public class ClienteExisteException extends Exception {
 
-    private Cliente cliente;
+    private final Cliente cliente;
 
     public ClienteExisteException(Cliente cliente) {
         this.cliente = cliente;

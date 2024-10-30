@@ -8,7 +8,7 @@ public abstract class Cuenta {
     protected int numeroCuenta;
     protected double saldo;
     protected Cliente titular;
-    private ArrayList<Movimiento> movimientos;
+    private final ArrayList<Movimiento> movimientos;
 
     //////////////////////////////////////////////////////
     // CONSTRUCTORES
@@ -19,7 +19,7 @@ public abstract class Cuenta {
         this.numeroCuenta = numeroCuenta;
         this.saldo = saldo;
         this.titular = titular;
-        this.movimientos = new ArrayList<Movimiento>();
+        this.movimientos = new ArrayList<>();
     }
 
     //////////////////////////////////////////////////////
@@ -100,10 +100,10 @@ public abstract class Cuenta {
         private static final byte INGRESO = 0;
         private static final byte RETIRO = 1;
 
-        private LocalDateTime fechaHora;
-        private double importe;
-        private double saldoFinal;
-        private byte tipo;
+        private final LocalDateTime fechaHora;
+        private final double importe;
+        private final double saldoFinal;
+        private final byte tipo;
 
         public Movimiento(LocalDateTime fechaHora, double importe, byte tipo) {
             this.fechaHora = fechaHora;
