@@ -11,6 +11,8 @@ public class Empresa {
         this.trabajadores = new ArrayList<>();
     }
 
+   
+
     public void addTrabajador(Trabajador trabajador) {
         this.trabajadores.add(trabajador);
     }
@@ -26,5 +28,7 @@ public class Empresa {
     public ArrayList<Trabajador> getTrabajadores() {
         return trabajadores;
     }
+
+    
 
 }

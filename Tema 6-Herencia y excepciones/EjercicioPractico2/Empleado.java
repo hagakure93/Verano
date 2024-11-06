@@ -1,4 +1,4 @@
-
+package EjercicioPractico2;
 
 public abstract class Empleado {
     String nombre;

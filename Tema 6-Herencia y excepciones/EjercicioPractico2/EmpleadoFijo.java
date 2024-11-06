@@ -1,3 +1,5 @@
+package EjercicioPractico2;
+
 public class EmpleadoFijo extends Empleado {
     private final double salarioMensual;
 
