@@ -4,7 +4,7 @@ public class Invertir {
         invertir(NUM);
 
     }
-
+    //Función recursiva
     static void invertir(int n) {
 
         if (n >= 0 && n < 10) // el caso base , la posibilidad más sencilla
