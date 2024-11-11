@@ -3,12 +3,12 @@ package EjercicioBiblioteca;
 import java.time.LocalDate;
 
 public class Libro {
-    private String titulo;
-    private Autor autor;
-    private String editorial;
-    private LocalDate fechaPublicacion;
-    private String isbn;
-    private double precio;
+    private final String titulo;
+    private final Autor autor;
+    private final String editorial;
+    private final LocalDate fechaPublicacion;
+    private final String isbn;
+    private final double precio;
 
     public Libro(String titulo, Autor autor, String editorial, LocalDate fechaPublicacion, String isbn, double precio) {
         this.titulo = titulo;
