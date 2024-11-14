@@ -13,8 +13,8 @@ public class trianEquila {
             for (int i = 0; i < altura; i++) {
 
                 for (int j = 0; j < base; j++) {
-                    // Con esto busca el índice central , añadiendo 2 asterisc , uno a cada lado
-                    if (j >= base / 2 - i && j <= base / 2 + i) {  // el entre 2 es para hallar el centro del trngl
+                    // Con esto busco el índice central , añadiendo 2 asterisc , uno a cada lado
+                    if (j >= base / 2 - i && j <= base / 2 + i) { // el entre 2 es para hallar el centro del trngl
                         System.out.print("* ");
 
                     } else {

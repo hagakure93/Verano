@@ -7,6 +7,7 @@ public class Ejer1Iniciacion {
 
         try (Scanner entrada = new Scanner(System.in)) {
             int cantidadNumeros, numActual;
+            // El Integer.MIN_VALUE is the smallest numbre, anyone else will be bigger than it
             int contador = 1, max = Integer.MIN_VALUE, min = Integer.MAX_VALUE, contadorMax = 0, contadorMin = 0;
             System.out.println("Cuántos números quieres introducir??");
             cantidadNumeros = entrada.nextInt();
