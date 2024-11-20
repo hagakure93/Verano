@@ -19,7 +19,7 @@ public class Instituto3 {
         System.out.println(alumnos);
 
     }
-
+    // Varias formas de implementar compareTo, no es difícil, tienes que usar lambda ->
     public static void ordenarAlumnosPorEdad(ArrayList<Alumno> alumnos) {
         alumnos.sort((Alumno a1, Alumno a2) -> {
             if (a1.getEdad() < a2.getEdad())
