@@ -7,15 +7,15 @@ public class NombreComparator implements Comparator<Object> {
         String nombre1 = null;
         String nombre2 = null;
 
-        if (obj1 instanceof Alumno)
-            nombre1 = ((Alumno) obj1).getNombre();
-        else if (!(obj1 instanceof Docente)) {
-        } else {
-            nombre1 = ((Docente) obj1).getNombre();
-        }
+        if (!(obj1 instanceof Alumno))
+            if (!(obj1 instanceof Docente)) {
+            } else {
+                nombre1 = ((Docente) obj1).getNombre();
+            }
+        else nombre1 = ((Alumno) obj1).getNombre();
 
-        if (obj2 instanceof Alumno)
-            nombre2 = ((Alumno) obj2).getNombre();
+        if (obj2 instanceof Alumno alumno)
+            nombre2 = alumno.getNombre();
         else if (!(obj2 instanceof Docente)) {
         } else {
             nombre2 = ((Docente) obj2).getNombre();
