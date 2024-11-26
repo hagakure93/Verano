@@ -56,7 +56,7 @@ public class Alumno implements Comparable<Alumno>, PersonaCentroEducativo {
         result = prime * result + ((nia == null) ? 0 : nia.hashCode());
         return result;
     }
-
+    // Ojito, que le he pasado un Objetc al método equals
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
