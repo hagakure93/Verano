@@ -20,8 +20,8 @@ public class Instituto6 {
         dam.pollLast();
         dam.offerFirst(new Alumno("Jud", "6539400", 49));
         dam.offerLast(new Alumno("Kimyonum", "563453", 55));
-
-        System.out.println(dam.removeFirst());
+        // Muestran por pantalla y eliminan, a partir de ahí ya no están en la List
+        System.out.println(dam.removeFirst()); 
         System.out.println(dam.removeLast());
 
         System.out.println(dam);
