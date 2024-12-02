@@ -48,7 +48,7 @@ public class Alumno implements Comparable<Alumno>, PersonaCentroEducativo {
             comparacion = this.nia.compareTo(a.getNia());
         return comparacion;
     }
-
+    // tanto el hascCode como el equals son autogenerados por la bombillita
     @Override
     public int hashCode() {
         final int prime = 31;
