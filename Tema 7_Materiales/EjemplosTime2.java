@@ -9,7 +9,7 @@ public class EjemplosTime2 {
     public static void main(String[] args) {
 
         // Fecha y hora de nacimiento
-        LocalDate fechaNacimiento = LocalDate.of(1981, 9, 1);
+        LocalDate fechaNacimiento = LocalDate.of(1955, 9, 3);
         LocalTime horaNacimiento = LocalTime.of(8, 0);
         // Fecha y hora actual
         LocalDateTime fechaHoraActual = LocalDateTime.now();
