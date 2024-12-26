@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Calificacion {
 
-    private Modulo modulo;
-    private ArrayList<Double> notas;
+    private final Modulo modulo;
+    private final ArrayList<Double> notas;
 
     public Calificacion(Modulo modulo) {
         this.modulo = modulo;
