@@ -12,8 +12,8 @@ public class Equipo {
         MAX_FUTBOLISTAS_POSICION.put(Posicion.DELANTERO, 4);
     }
 
-    private String nombre;
-    private List<Futbolista> futbolistas;
+    private final String nombre;
+    private final List<Futbolista> futbolistas;
 
     public Equipo(String nombre) {
         this.nombre = nombre;
@@ -60,14 +60,18 @@ public class Equipo {
 
             public int prioridadPosicion(Posicion posicion) {
                 switch (posicion) {
-                    case PORTERO:
+                    case PORTERO -> {
                         return 1;
-                    case DEFENSA:
+                    }
+                    case DEFENSA -> {
                         return 2;
-                    case CENTROCAMPISTA:
+                    }
+                    case CENTROCAMPISTA -> {
                         return 3;
-                    case DELANTERO:
+                    }
+                    case DELANTERO -> {
                         return 4;
+                    }
                 }
                 return 0;
             }
