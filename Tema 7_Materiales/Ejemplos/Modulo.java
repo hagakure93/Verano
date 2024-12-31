@@ -6,8 +6,8 @@ public enum Modulo {
     ENTORNOS_DE_DESARROLLO("ED", "Entornos de desarrollo"),
     SISTEMAS_INFORMATICOS("SI","Sistemas informáticos");    
 
-    private String nombre;
-    private String abreviatura;  
+    private final String nombre;
+    private final String abreviatura;  
   
     Modulo(String abreviatura, String nombre) {
         this.abreviatura = abreviatura;
