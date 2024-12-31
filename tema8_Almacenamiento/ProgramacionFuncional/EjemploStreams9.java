@@ -21,7 +21,7 @@ public class EjemploStreams9 {
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting())) 
                 .entrySet().stream()
                 .sorted(Map.Entry.<String, Long>comparingByValue(Comparator.reverseOrder()))              
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, _) -> e1, LinkedHashMap::new));
    
         System.out.println("Palabras ordenadas por frecuencia: " + palabrasOrden+"\n\n");
 
