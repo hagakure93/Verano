@@ -7,7 +7,7 @@ public class EjemplosFicheros {
     public static void main(String[] args) {
 
         //fichero
-        File fichero = new File("../imgs/default/default.jpg");
+        File fichero = new File("tema8_Almacenamiento/Ejemplo API STREAM JAVA 2.png");
         if (fichero.exists())
             System.out.println("El fichero existe");
         else
@@ -17,7 +17,7 @@ public class EjemplosFicheros {
         System.out.println("Ruta absoluta: " + fichero.getAbsolutePath()+"\n\n");
 
         //carpeta
-        File carpeta = new File("../imgs");
+        File carpeta = new File("tema8_Almacenamiento/ProgramacionFuncional");
         if (carpeta.exists())
             System.out.println("La carpeta existe");
         else
