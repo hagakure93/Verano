@@ -15,7 +15,6 @@ public class EjemplosCrearFicheros {
             else
                 System.out.println("El archivo ya existe");
         } catch (IOException e) {
-            e.printStackTrace();
         }
 
         // crear carpeta
@@ -33,7 +32,7 @@ public class EjemplosCrearFicheros {
             System.out.println("No se pudo eliminar el archivo");
 
         // listar carpeta
-        File directorio2 = new File(".");
+        File directorio2 = new File("."); // El punto indica el directorio actual
         String[] archivos = directorio2.list();
         System.out.println("\nLista de archivos:");
         if (archivos != null)
