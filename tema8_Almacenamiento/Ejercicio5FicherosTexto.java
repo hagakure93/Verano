@@ -38,18 +38,18 @@ public class Ejercicio5FicherosTexto {
             }
 
             File archivoSalida = new File(rutaSalida);
-            BufferedReader lector = new BufferedReader(new FileReader(archivoEntrada));
-            BufferedWriter escritor = new BufferedWriter(new FileWriter(archivoSalida));
-
-            int datos;
-            while ((datos = lector.read()) != -1) {
-                char c = (char) datos;
-                if (estaEncriptado)
-                    escritor.write(c - DESPLAZAMIENTO); // desencriptamos
-                else
-                    escritor.write(c + DESPLAZAMIENTO); // encriptamos
+            BufferedWriter escritor;
+            try (BufferedReader lector = new BufferedReader(new FileReader(archivoEntrada))) {
+                escritor = new BufferedWriter(new FileWriter(archivoSalida));
+                int datos;
+                while ((datos = lector.read()) != -1) {
+                    char c = (char) datos;
+                    if (estaEncriptado)
+                        escritor.write(c - DESPLAZAMIENTO); // desencriptamos
+                    else
+                        escritor.write(c + DESPLAZAMIENTO); // encriptamos
+                }
             }
-            lector.close();
             escritor.close();
 
         } catch (FileNotFoundException e) {
