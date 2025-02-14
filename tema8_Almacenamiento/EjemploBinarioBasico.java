@@ -10,12 +10,12 @@ public class EjemploBinarioBasico {
         String fileName = "ejemplo.dat";
         // Leer datos desde el archivo binario
         try {
-            FileInputStream fis = new FileInputStream(fileName);
-            int num;
-            System.out.println("Datos leídos desde el archivo binario:");
-            while ((num = fis.read()) != -1)
-                System.out.print(num + " ");
-            fis.close();
+            try (FileInputStream fis = new FileInputStream(fileName)) {
+                int num;
+                System.out.println("Datos leídos desde el archivo binario:");
+                while ((num = fis.read()) != -1)
+                    System.out.print(num + " ");
+            }
             System.out.println();
         } catch (IOException e) {
             System.err.println("Error al leer");

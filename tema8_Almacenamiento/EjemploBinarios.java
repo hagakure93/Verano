@@ -18,21 +18,21 @@ public class EjemploBinarios {
        
         
         try {
-            //escribimos datos en el fichero binario
-            DataOutputStream out = new DataOutputStream(new FileOutputStream(fichero));
-            out.writeBoolean(aprobado);
-            out.writeUTF(nombreAlumno);
-            out.writeInt(conv);
-            out.writeFloat(nota);
-            out.close();
+            try ( //escribimos datos en el fichero binario
+                    DataOutputStream out = new DataOutputStream(new FileOutputStream(fichero))) {
+                out.writeBoolean(aprobado);
+                out.writeUTF(nombreAlumno);
+                out.writeInt(conv);
+                out.writeFloat(nota);
+            }
 
-            //leemos datos del fichero binario
-            DataInputStream in = new DataInputStream(new FileInputStream(fichero));
-            System.out.println("Valor leído de aprobado: " + in.readBoolean());
-            System.out.println("Valor leído de nombreAlumno: " + in.readUTF());
-            System.out.println("Valor leído de convocatoria: " + in.readInt());
-            System.out.println("Valor leído de nota: " + in.readFloat());
-            in.close();
+            try ( //leemos datos del fichero binario
+                    DataInputStream in = new DataInputStream(new FileInputStream(fichero))) {
+                System.out.println("Valor leído de aprobado: " + in.readBoolean());
+                System.out.println("Valor leído de nombreAlumno: " + in.readUTF());
+                System.out.println("Valor leído de convocatoria: " + in.readInt());
+                System.out.println("Valor leído de nota: " + in.readFloat());
+            }
 
         } catch (IOException e) {
             System.out.println("ERROR");
