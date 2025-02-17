@@ -1,1 +1,6 @@
-Hola esto es un fichero de prueba
+Esto es un texto sin salto de líneaNUEVO PALABRA
+Esto es un texto con salto de línea
+4.5455
+6
+8
+20
