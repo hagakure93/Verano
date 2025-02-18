@@ -17,6 +17,7 @@ public class EjemploMySQL_Conexion {
         try {
 
             try ( // realizamos connexión
+                    @SuppressWarnings("unused")
                     Connection conex = DriverManager.getConnection(URL, USER, PWD)) {
                 System.out.println("Se ha conectado correctamente");
             }
