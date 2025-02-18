@@ -12,6 +12,6 @@
         "Tema 7_Materiales/Ejemplos"
     ],
     "java.project.referencedLibraries": [
-        "tema8_Almacenamiento/mysql/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0.jar"
+        "tema8_Almacenamiento/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0.jar"
     ]
 }
