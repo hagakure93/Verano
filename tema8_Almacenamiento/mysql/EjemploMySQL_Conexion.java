@@ -8,7 +8,7 @@ public class EjemploMySQL_Conexion {
 
     // Datos conexión con la BD
     public static final String USER = "root";
-    public static final String PWD = "";
+    public static final String PWD = "mysqlclavE6.";
     public static final String URL = "jdbc:MySQL://localhost/Empresa";
 
 
@@ -16,10 +16,10 @@ public class EjemploMySQL_Conexion {
 
         try {
 
-            // realizamos connexión
-            Connection conex = DriverManager.getConnection(URL, USER, PWD);
-            System.out.println("Se ha conectado correctamente");
-            conex.close();
+            try ( // realizamos connexión
+                    Connection conex = DriverManager.getConnection(URL, USER, PWD)) {
+                System.out.println("Se ha conectado correctamente");
+            }
 
         } catch (SQLException e) {
             System.out.println(e);
