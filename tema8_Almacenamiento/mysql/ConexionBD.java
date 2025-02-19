@@ -8,8 +8,8 @@ public class ConexionBD {
 
     // Datos conexión con la BD
     private static final String USER = "root";
-    private static final String PWD = "";
-    private static final String URL = "jdbc:MySQL://localhost/Empresa";
+    private static final String PWD = "m";
+    private static final String URL = "jdbc:MySQL://localhost/";
 
     public static Connection conectar(String nombreBD) throws SQLException {
         return DriverManager.getConnection(URL+nombreBD, USER, PWD);        
