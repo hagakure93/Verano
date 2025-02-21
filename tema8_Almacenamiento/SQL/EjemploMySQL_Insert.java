@@ -14,14 +14,14 @@ public class EjemploMySQL_Insert {
         try {
 
             // Datos del contacto a insertar
-            String nombre = "Pablo;";
+            String nombre = GeneredorNombres.generarConApellido();
             String correo = nombre.replaceAll(" ", "_").toLowerCase() + "@aulaenlanube.com";
             int edad = new Random().nextInt(18,25);
             // realizamos conexión
-            Connection conex = ConexionBD.conectar("agenda");
+            Connection conex = ConexionBD.conectar("Empresa");
 
             // insertamos contacto
-            String query = "INSERT INTO contacto VALUES (?,?,?)";
+            String query = "INSERT INTO Empleados (nombre, correo, edad) VALUES (?,?,?)";
             PreparedStatement queryInsert = conex.prepareStatement(query);
             queryInsert.setString(1, nombre);
             queryInsert.setString(2, correo);
