@@ -15,15 +15,15 @@ public class EjemploMySQL_Select {
             Connection conex = ConexionBD.conectar("Empresa");              
 
             // preparamos consulta y la ejecutamos
-            String query = "SELECT nombre, oficina FROM Empleados";
+            String query = "SELECT * FROM Empleados";
             PreparedStatement instruccion = conex.prepareStatement(query);
             ResultSet resultado = instruccion.executeQuery();
 
             //analizamos el resultado de la consulta
             while (resultado.next()) {
                 String nombre = resultado.getString("nombre");
-                String oficina = resultado.getString("oficina");
-                System.out.println(nombre+" ("+oficina+")");
+                String correo = resultado.getString("correo");
+                System.out.println(nombre+" ("+correo+")");
             }           
 
         } catch (SQLException e) {
