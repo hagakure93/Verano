@@ -22,6 +22,8 @@ public class EjemploMySQL_Imagenes {
             Connection conex = ConexionBD.conectar("agenda2");
             insertarContactoBD(conex, generarContactoAleatorio());
             mostrarDatosContactosBD(conex);
+            
+            
 
         } catch (SQLException e) {
         }
@@ -111,7 +113,7 @@ public class EjemploMySQL_Imagenes {
         }
 
     }
-
+    // No está implementado porque no quiero tener una carpeta con mil imágenes
     public static void cargarImagenesContactosBD(Connection conex, String rutaCarpeta) {
 
         File carpeta = new File(rutaCarpeta);

@@ -8,7 +8,7 @@ public class EjemploMySQL_Conexion {
 
     // Datos conexión con la BD
     public static final String USER = "root";
-    public static final String PWD = "mysqlclavE6."; //la contra
+    public static final String PWD = ""; //la contra
     public static final String URL = "jdbc:MySQL://localhost/Empresa";
 
 

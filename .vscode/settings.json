@@ -3,7 +3,6 @@
         ".",
         "Códigos de prueba",
         "Exercises",
-        "Tema 1 y 2 ",
         "Tema 3 - Métodos",
         "Tema 4 - Arrays y Matrices",
         "Tema 5-POO",
@@ -13,6 +12,7 @@
         "Tema 7_Materiales/Ejemplos"
     ],
     "java.project.referencedLibraries": [
-        "tema8_Almacenamiento/SQL/mysql-connector-j-9.2.0.jar"
+        "/Users/hagakure/Documents/Verano/tema8_Almacenamiento/SQL/mysql-connector-j-9.2.0.jar",
+        "lib/jBCrypt-0.4.3.jar"
     ]
 }
