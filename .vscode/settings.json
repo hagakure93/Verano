@@ -14,5 +14,6 @@
     "java.project.referencedLibraries": [
         "/Users/hagakure/Documents/Verano/tema8_Almacenamiento/SQL/mysql-connector-j-9.2.0.jar"
     ],
-    "maven.view": "flat"
+    "maven.view": "flat",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
