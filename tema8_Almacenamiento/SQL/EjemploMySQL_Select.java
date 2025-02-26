@@ -12,10 +12,10 @@ public class EjemploMySQL_Select {
         try {
 
             // realizamos conexión
-            Connection conex = ConexionBD.conectar("Empresa");              
+            Connection conex = ConexionBD.conectar("agenda2");              
 
             // preparamos consulta y la ejecutamos
-            String query = "SELECT * FROM Empleados";
+            String query = "SELECT * FROM contacto";
             PreparedStatement instruccion = conex.prepareStatement(query);
             ResultSet resultado = instruccion.executeQuery();
 
