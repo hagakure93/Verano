@@ -18,27 +18,28 @@ public class EjemploImagen {
     public static void main(String[] args) throws IOException {
 
         // creamos un JFrame
-        JFrame ventana = new JFrame();        
-        ventana.setSize(1000, 600);  
-        ventana.setLayout(new FlowLayout());                 
-        
+        JFrame ventana = new JFrame();
+        ventana.setSize(1000, 600);
+        ventana.setLayout(new FlowLayout());
+
         // creamos la imagen
-        BufferedImage imagenOriginal = ImageIO.read(new File("aulaenlanube/tema9/imagenes/logo-aulaenlanube.jpg"));
+        BufferedImage imagenOriginal = ImageIO.read(
+                new File("/Users/hagakure/Documents/Verano/Tema9_InterfazGraficaJava/imagenes/logo-aulaenlanube.jpg"));
 
         // redimensionamos la imagen
-        Image imagenEscalada1 = imagenOriginal.getScaledInstance(300, 300, Image.SCALE_FAST);  
-        Image imagenEscalada2 = imagenOriginal.getScaledInstance(300, 300, Image.SCALE_SMOOTH);        
-        
+        Image imagenEscalada1 = imagenOriginal.getScaledInstance(300, 300, Image.SCALE_FAST);
+        Image imagenEscalada2 = imagenOriginal.getScaledInstance(300, 300, Image.SCALE_SMOOTH);
+
         // creamos un JLabel y fijamos la imagen sobre él
         JLabel labelImagen1 = new JLabel(new ImageIcon(imagenEscalada1));
         JLabel labelImagen2 = new JLabel(new ImageIcon(imagenEscalada2));
-
 
         labelImagen1.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent e) {
-                System.out.println("Has pulsado en la imagen de la izquierda en las coordenadas ("+e.getX()+", "+e.getY()+")");
+                System.out.println("Has pulsado en la imagen de la izquierda en las coordenadas (" + e.getX() + ", "
+                        + e.getY() + ")");
             }
 
             @Override
@@ -60,13 +61,13 @@ public class EjemploImagen {
             public void mouseExited(MouseEvent e) {
                 System.out.println("Has salido de la imagen de la izquierda");
             }
-            
+
         });
 
         // añadimos el JLabel al JFrame, visible y cierre
-        ventana.add(labelImagen1);    
-        ventana.add(labelImagen2);   
+        ventana.add(labelImagen1);
+        ventana.add(labelImagen2);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setVisible(true);
-    }    
+    }
 }
