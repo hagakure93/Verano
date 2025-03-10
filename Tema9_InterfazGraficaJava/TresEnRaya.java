@@ -25,6 +25,7 @@ public class TresEnRaya extends JFrame {
         for (JButton[] tablero1 : tablero) {
             for (int j = 0; j < tablero1.length; j++) {
                 tablero1[j] = new JButton();
+                tablero1[j].setOpaque(true);
                 tablero1[j].addActionListener(e -> jugar(e));
                 add(tablero1[j]);
             }
