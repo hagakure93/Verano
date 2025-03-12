@@ -94,6 +94,6 @@ public class CronometroPrecision extends JFrame {
     }
 
     public static void main(String[] args) {
-        new CronometroPrecision();
+        //new CronometroPrecision();
     }
 }
