@@ -61,6 +61,6 @@ public class ConversorMonedas extends JFrame {
     }
 
     public static void main(String[] args) {
-        // new ConversorMonedas(); // eliminar el comentario para ejecutar
+         //new ConversorMonedas(); // eliminar el comentario para ejecutar
     }
 }

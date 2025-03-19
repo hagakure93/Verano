@@ -13,7 +13,7 @@ public class JuegoMecanografiaBD {
 
     // datos conexión con la BD
     private static final String USER = "root";
-    private static final String PWD = ""; // Poner la pw de la BD
+    private static final String PWD = "nuevamysqlclavE6."; // Poner la pw de la BD
     private static final String URL = "jdbc:MySQL://localhost/juegomeca";
 
     // conexión con la BD
